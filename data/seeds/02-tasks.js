@@ -5,9 +5,9 @@ exports.seed = function(knex) {
     .then(function () {
       // Inserts seed entries
       return knex('tasks').insert([
-        { description: '6 foot tall metal rocket', notes: 'Requires jet fuel'},
-        { description: '10 foot deep', notes: '20 bags of soil to mix mud'},
-        { description: '12 ft by 12 ft', notes: 'Max of 500lbs on weight rack '}
+        { description: '6 foot tall metal rocket', notes: 'Requires jet fuel', completed: false},
+        { description: '10 foot deep', notes: '20 bags of soil to mix mud', completed: false},
+        { description: '12 ft by 12 ft', notes: 'Max of 500lbs on weight rack ', completed: false}
       ]);
     });
 };

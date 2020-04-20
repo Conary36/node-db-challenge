@@ -5,9 +5,9 @@ exports.seed = function(knex) {
     .then(function () {
       // Inserts seed entries
       return knex('projects').insert([
-        { projName: 'Rocket', description: 'model rocket'},
-        { projName: 'Mud-Pit', description: 'Wrestling Pit full of mud'},
-        { projName: 'Home-Gym', description: 'Place to get strong'}
+        { projName: 'Rocket', description: 'model rocket', completed: false},
+        { projName: 'Mud-Pit', description: 'Wrestling Pit full of mud', completed: false},
+        { projName: 'Home-Gym', description: 'Place to get strong', completed: false}
       ]);
     });
 };
