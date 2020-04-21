@@ -9,6 +9,8 @@ exports.up = function(knex) {
         tbl.varchar('description', 255)
             .nullable()
             .unique()
+        tbl.boolean('completed')
+            .notNullable()
     })
     .createTable('tasks', tbl =>{
         tbl.increments('id')
@@ -18,6 +20,8 @@ exports.up = function(knex) {
         tbl.text('notes', 128)
             .nullable()
             .unique()
+        tbl.boolean('completed')
+            .notNullable()
     })
     .createTable('resources', tbl => {
         tbl.increments('id')
